@@ -1,10 +1,15 @@
+
+<link href="app/assets/stylesheets/application.css" rel="stylesheet">
+
 <!-- used to diplay any notice messages -->
 <p id="notice"><%= notice %></p>
 
 <!-- Header for page -->
-<h1>Main Tweet Page</h1>
-
+<div class="container">
+<h1 class="col-md-4" style="border: 2px solid #337ab7"> Tweet Home Page</h1>
+</div>
 <!-- Table to display all tweets -->
+<div class="container">
 <table>
   <!-- Table Header -->
   <thead>
@@ -16,7 +21,6 @@
   </thead>
 
   <tbody>
-
     <!-- Iterates through array of tweets -->
     <% @tweets.each do |x| %>
       <tr>
@@ -35,8 +39,7 @@
 
   </tbody>
 </table>
-
+</div>
 <br>
 <!-- link to allow user to create a new tweet -->
 <%= link_to 'New Tweet', new_tweet_path, class: "btn btn-primary" %>
-
